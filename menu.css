@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --accent-color: #ff6b6b;
+    --dark-text: #2d3436;
+    --white: #ffffff;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.heading {
+    background-color: transparent !important;
+    padding: 60px 0 20px 0;
+    text-align: center;
+}
+
+.heading h2 {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+}
+.search-container {
+    max-width: 600px;
+    margin: 20px auto 50px;
+}
+#search-bar {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 50px !important;
+    padding: 15px 25px !important; 
+    height: 55px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.15) !important;
+}
+.menu-section-title {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.2rem !important;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: block;
+    width: 100%;
+}
+
+.menu-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 10px auto;
+}
+.menu-item .card {
+    border: none !important;
+    border-radius: 20px !important;
+    background-color: var(--white) !important;
+    box-shadow: var(--card-shadow) !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.menu-item .card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
+}
+.img-container {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.5s ease !important;
+}
+
+.menu-item .card:hover .card-img-top {
+    transform: scale(1.1);
+}
+.card-body {
+    padding: 1.5rem !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    color: var(--dark-text);
+    margin-bottom: 12px;
+}
+
+.price-tag {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+.addItemBtn {
+    background-color: #333 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 12px 0 !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    transition: all 0.3s ease !important;
+}
+
+.addItemBtn:hover {
+    background-color: var(--accent-color) !important;
+    transform: scale(1.02);
+}
+
+.badge.bg-danger {
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.no-results {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    
+    .heading h2 {
+        font-size: 2.2rem !important;
+    }
+
+    .menu-section-title {
+        font-size: 1.8rem !important;
+        margin-top: 30px;
+    }
+    .search-container {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    #search-bar {
+        height: 48px !important;
+        padding: 10px 20px !important;
+        font-size: 0.9rem;
+    }
+
+    .img-container {
+        height: 180px;
+    }
+    .card-body {
+        padding: 1rem !important;
+    }
+
+    .card-title {
+        font-size: 1.1rem !important;
+    }
+
+    .price-tag {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .addItemBtn {
+        padding: 10px 0 !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+#search-bar.no-match {
+    border-color: #ff6b6b !important;
+    background-color: #fff5f5;
+}
+@media (max-width: 480px) {
+    .menu-item {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .heading h2 {
+        font-size: 1.8rem !important;
+    }
+}

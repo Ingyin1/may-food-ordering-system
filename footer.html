@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <style>
+   .site-footer {
+    background-color: #1E3A5F; 
+    color: #FFFFFF; 
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer-divider {
+    color: #F2F4F7; 
+    font-size: 16px;
+}
+
+.footer-container strong {
+    color: #4DA8FF; 
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        position: relative;
+        padding: 15px 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .footer-container p {
+        font-size: 14px;
+    }
+
+    .footer-divider {
+        display: none; 
+    }
+}
+
+
+  </style>
+</head>
+<body>
+  <footer class="site-footer">
+    <div class="footer-container">
+        <p>&copy; 2024 All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
